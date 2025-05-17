@@ -36,5 +36,14 @@ exports.delteteStudent = async (req,res) => {
     } catch (error) {
         return res.status(500).json({errors:true,message:error.message})
     }
+}
+
+exports.getStudentById = async (req,res) => {
+    try {
+        const data = await Student.findById(req.params.id)
+        return res.json({errors:false,data:data})
+    } catch (error) {
+        return res.status(500).json({errors:true,message:error.message})
+    }
     
 }
