@@ -10,7 +10,7 @@ route.put("/:id",putStudent)
 
 route.delete("/:id",delteteStudent)
 
-route.get("/stud/:id",getStudentById)
+route.get("/:id",getStudentById)
 
 
 module.exports = route
